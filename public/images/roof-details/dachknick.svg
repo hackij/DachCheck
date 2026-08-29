@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720" role="img" aria-label="Dachlandschaft mit kleiner Gaube und rot markierter Anschlusslinie des Gaubendachs">
+  <rect width="1200" height="720" rx="24" fill="#f8fafc"/>
+  <path d="M58 356 489 388 489 655 58 585Z" fill="#d1b447" stroke="#152033" stroke-width="6" stroke-linejoin="round"/>
+  <path d="M489 388 704 353 704 603 489 655Z" fill="#f2d45d" stroke="#152033" stroke-width="6" stroke-linejoin="round"/>
+  <path d="M704 353 805 367 805 625 704 603Z" fill="#c7aa3f" stroke="#152033" stroke-width="6" stroke-linejoin="round"/>
+  <path d="M805 367 987 177 1144 312 1144 530 805 625Z" fill="#f2d45d" stroke="#152033" stroke-width="6" stroke-linejoin="round"/>
+  <path d="M58 356 371 169 489 388Z" fill="#60639b" stroke="#152033" stroke-width="6" stroke-linejoin="round"/>
+  <path d="M371 169 685 154 704 353 489 388Z" fill="#6d70c1" stroke="#152033" stroke-width="6" stroke-linejoin="round"/>
+  <path d="M685 154 987 177 805 367 704 353Z" fill="#595c8d" stroke="#152033" stroke-width="6" stroke-linejoin="round"/>
+  <path d="M987 177 1144 312 805 367Z" fill="#f2d45d" stroke="#152033" stroke-width="6" stroke-linejoin="round"/>
+  <path d="M481 197 540 193 595 229 536 233Z" fill="#7679c9" stroke="#152033" stroke-width="5" stroke-linejoin="round"/>
+  <path d="M536 233 595 229 594 302 536 310Z" fill="#f2d45d" stroke="#152033" stroke-width="5" stroke-linejoin="round"/>
+  <path d="M481 197 536 233 536 310 501 286Z" fill="#d1b447" stroke="#152033" stroke-width="5" stroke-linejoin="round"/>
+  <path d="M481 197 540 193" fill="none" stroke="#ffffff" stroke-width="31" stroke-linecap="round" opacity=".92"/>
+  <path d="M481 197 540 193" fill="none" stroke="#ef3340" stroke-width="21" stroke-linecap="round"/>
+  <path d="M481 197 540 193" fill="none" stroke="#7a0b18" stroke-width="3" stroke-linecap="round"/>
+</svg>

@@ -1,0 +1,114 @@
+.welcome-page {
+  min-height: 100vh;
+  display: grid;
+  place-content: center;
+  padding: 28px 16px;
+}
+
+.welcome-stage {
+  width: min(1160px, calc(100vw - 32px));
+  display: grid;
+  justify-items: center;
+  gap: 22px;
+}
+
+.welcome-banner {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 2.4 / 1;
+  min-height: 390px;
+  overflow: hidden;
+  border-radius: 26px;
+  background: #26384e;
+  box-shadow: 0 24px 60px rgba(20, 39, 70, 0.2);
+}
+
+.welcome-banner > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.welcome-shade {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(12, 27, 49, 0.88), rgba(12, 27, 49, 0.38) 58%, rgba(12, 27, 49, 0.05));
+}
+
+.welcome-brand {
+  position: absolute;
+  top: 26px;
+  left: 30px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: white;
+}
+
+.welcome-brand strong,
+.welcome-brand small {
+  display: block;
+}
+
+.welcome-brand strong {
+  font-size: 1.22rem;
+  line-height: 1.1;
+}
+
+.welcome-brand small {
+  margin-top: 3px;
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 0.7rem;
+}
+
+.welcome-school {
+  position: absolute;
+  top: 20px;
+  right: 31px;
+  width: 158px;
+  filter: drop-shadow(0 1px 1px rgba(255, 255, 255, 0.85)) drop-shadow(0 4px 9px rgba(7, 18, 35, 0.28));
+}
+
+.welcome-school img { display: block; width: 100%; height: auto; }
+
+.welcome-copy {
+  position: absolute;
+  left: clamp(30px, 7vw, 85px);
+  top: 53%;
+  transform: translateY(-38%);
+  color: white;
+}
+
+.welcome-copy .eyebrow { color: #a9c9ff; }
+.welcome-copy h1 {
+  margin: 8px 0 4px;
+  font-size: clamp(3.5rem, 8vw, 7.3rem);
+  line-height: 0.95;
+  letter-spacing: -0.065em;
+}
+.welcome-copy p { margin: 0; color: #cfe0f3; font-size: clamp(1rem, 2vw, 1.35rem); }
+
+.welcome-button {
+  min-width: 230px;
+  min-height: 56px;
+  background: linear-gradient(135deg, #2c9b70, #217c5a);
+  box-shadow: 0 10px 25px rgba(29, 116, 81, 0.28);
+}
+
+.welcome-credit {
+  margin: 15px 0 0;
+  color: #8190a5;
+  text-align: center;
+  font-size: 0.72rem;
+}
+
+@media (max-width: 650px) {
+  .welcome-banner { min-height: 500px; aspect-ratio: auto; }
+  .welcome-banner > img { object-position: 67% center; }
+  .welcome-shade { background: linear-gradient(0deg, rgba(12, 27, 49, 0.92), rgba(12, 27, 49, 0.12)); }
+  .welcome-brand { top: 20px; left: 20px; }
+  .welcome-school { top: 17px; right: 18px; width: 122px; }
+  .welcome-copy { top: auto; right: 24px; bottom: 45px; left: 24px; transform: none; }
+  .welcome-copy h1 { font-size: 3.45rem; }
+  .welcome-button { width: 100%; }
+}

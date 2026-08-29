@@ -1,0 +1,9 @@
+.asset-credit {
+  margin-top: 5px;
+  font-size: 0.66rem;
+}
+
+.asset-credit a {
+  color: #637b9f;
+  text-underline-offset: 2px;
+}

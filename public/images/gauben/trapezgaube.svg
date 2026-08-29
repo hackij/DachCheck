@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 680" role="img" aria-label="Klare technische Darstellung einer Trapezgaube">
+  <rect width="1000" height="680" rx="24" fill="#f8fafc"/>
+  <path d="M119 116 610 56 903 509 297 625Z" fill="#5b5e98" stroke="#172033" stroke-width="7" stroke-linejoin="round"/>
+  <path d="M264 222 559 179 726 331 378 389Z" fill="#777bc7" stroke="#172033" stroke-width="7" stroke-linejoin="round"/>
+  <path d="M264 222 378 389 408 548 300 456Z" fill="#686ba8" stroke="#172033" stroke-width="7" stroke-linejoin="round"/>
+  <path d="M559 179 726 331 675 492 606 346Z" fill="#4f5287" stroke="#172033" stroke-width="7" stroke-linejoin="round"/>
+  <path d="M378 389 726 331 675 492 408 548Z" fill="#efd66a" stroke="#172033" stroke-width="7" stroke-linejoin="round"/>
+  <path d="M331 207 553 174 748 317 708 346 377 401 240 250Z" fill="#8588d1" stroke="#172033" stroke-width="7" stroke-linejoin="round"/>
+  <path d="M459 409 624 381 601 486 478 509Z" fill="#dcecf4" stroke="#172033" stroke-width="7" stroke-linejoin="round"/>
+  <path d="M541 395 530 499M465 458 612 432" fill="none" stroke="#8ba6b8" stroke-width="6"/>
+  <path d="M240 250 377 401M708 346 675 492" fill="none" stroke="#303a54" stroke-width="5"/>
+</svg>

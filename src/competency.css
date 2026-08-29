@@ -1,0 +1,134 @@
+.competency-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  display: grid;
+  place-items: center;
+  padding: 18px;
+  background: rgba(18, 31, 52, 0.3);
+  backdrop-filter: blur(22px) saturate(135%);
+  -webkit-backdrop-filter: blur(22px) saturate(135%);
+}
+
+.competency-window {
+  position: relative;
+  width: min(720px, 100%);
+  max-height: calc(100vh - 36px);
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.84);
+  border-radius: 30px;
+  background:
+    radial-gradient(circle at 8% 0%, rgba(255, 255, 255, 0.96), transparent 34%),
+    linear-gradient(145deg, rgba(255, 255, 255, 0.82), rgba(240, 247, 255, 0.72));
+  box-shadow:
+    0 38px 100px rgba(7, 20, 40, 0.33),
+    inset 0 1px 0 rgba(255, 255, 255, 0.95);
+}
+
+.competency-window::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  border-radius: inherit;
+  background: linear-gradient(120deg, rgba(255, 255, 255, 0.38), transparent 28%, transparent 72%, rgba(103, 153, 225, 0.12));
+}
+
+.competency-heading {
+  position: relative;
+  padding: 30px 36px 24px;
+  border-bottom: 1px solid rgba(177, 196, 220, 0.5);
+}
+
+.competency-heading__row {
+  display: flex;
+  gap: 17px;
+  align-items: flex-start;
+}
+
+.competency-heading__icon {
+  flex: none;
+  width: 54px;
+  height: 54px;
+  border-radius: 17px;
+  display: grid;
+  place-items: center;
+  color: white;
+  background: linear-gradient(145deg, #2857aa, #4b78c8);
+  box-shadow: 0 10px 28px rgba(40, 87, 170, 0.28);
+}
+
+.competency-heading__icon svg { width: 27px; }
+.competency-heading h1 { margin: 7px 0 0; font-size: clamp(1.85rem, 4vw, 2.65rem); line-height: 1.04; letter-spacing: -0.045em; }
+
+.competency-progress {
+  height: 4px;
+  margin-top: 22px;
+  overflow: hidden;
+  border-radius: 99px;
+  background: rgba(129, 151, 181, 0.22);
+}
+
+.competency-progress span {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+  background: linear-gradient(90deg, #2c956c, #65c596);
+  transition: width 0.12s linear;
+}
+
+.competency-scroll {
+  position: relative;
+  max-height: min(54vh, 470px);
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  padding: 28px 36px 42px;
+  scrollbar-color: #8ca3c2 transparent;
+}
+
+.competency-lead {
+  margin: 0;
+  color: #172033;
+  font-size: 1.13rem;
+  font-weight: 760;
+  line-height: 1.55;
+}
+
+.competency-scroll > p:not(.competency-lead) { color: #566780; line-height: 1.65; }
+.competency-scroll h2 { margin: 30px 0 13px; font-size: 1.22rem; }
+.competency-actions { display: grid; gap: 12px; }
+.competency-action { padding: 17px 18px; border: 1px solid rgba(191, 207, 228, 0.72); border-radius: 16px; background: rgba(255, 255, 255, 0.62); }
+.competency-action b { display: block; margin-bottom: 4px; color: #214d93; }
+.competency-action p { margin: 0; color: #5d6d83; line-height: 1.52; font-size: 0.92rem; }
+.competency-result { margin-top: 26px; padding: 20px; border-radius: 17px; color: #165d43; background: rgba(222, 245, 234, 0.82); border: 1px solid rgba(120, 192, 157, 0.42); }
+.competency-result b { display: block; margin-bottom: 6px; }
+.competency-result p { margin: 0; line-height: 1.55; }
+.competency-end { height: 2px; margin-top: 22px; }
+
+.competency-footer {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  padding: 20px 36px 24px;
+  border-top: 1px solid rgba(177, 196, 220, 0.5);
+  background: rgba(249, 252, 255, 0.74);
+}
+
+.competency-footer p { margin: 0; color: #718198; font-size: 0.8rem; line-height: 1.4; }
+.competency-footer p strong { color: #258b64; }
+.competency-footer .primary { flex: none; min-width: 205px; }
+
+@media (max-width: 620px) {
+  .competency-backdrop { padding: 9px; }
+  .competency-window { max-height: calc(100vh - 18px); border-radius: 22px; }
+  .competency-heading { padding: 23px 20px 18px; }
+  .competency-heading__icon { width: 46px; height: 46px; border-radius: 14px; }
+  .competency-heading h1 { font-size: 1.65rem; }
+  .competency-scroll { max-height: 52vh; padding: 23px 20px 34px; }
+  .competency-lead { font-size: 1rem; }
+  .competency-footer { display: block; padding: 15px 20px 18px; }
+  .competency-footer p { margin-bottom: 10px; }
+  .competency-footer .primary { width: 100%; }
+}

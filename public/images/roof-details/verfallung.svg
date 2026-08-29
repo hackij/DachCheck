@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720" role="img" aria-label="Dachlandschaft mit zwei unterschiedlich hohen Firsten und rot markierter Verfallung">
+  <rect width="1200" height="720" rx="24" fill="#f8fafc"/>
+  <path d="M84 374 580 440 580 650 84 574Z" fill="#d1b447" stroke="#152033" stroke-width="6" stroke-linejoin="round"/>
+  <path d="M580 440 810 493 810 674 580 650Z" fill="#c7aa3f" stroke="#152033" stroke-width="6" stroke-linejoin="round"/>
+  <path d="M810 493 1100 393 1100 572 810 674Z" fill="#f2d45d" stroke="#152033" stroke-width="6" stroke-linejoin="round"/>
+  <path d="M84 374 462 112 580 440Z" fill="#60639b" stroke="#152033" stroke-width="6" stroke-linejoin="round"/>
+  <path d="M462 112 776 233 580 440Z" fill="#7679c9" stroke="#152033" stroke-width="6" stroke-linejoin="round"/>
+  <path d="M580 440 776 233 938 304 810 493Z" fill="#595c8d" stroke="#152033" stroke-width="6" stroke-linejoin="round"/>
+  <path d="M938 304 1018 253 1100 393 810 493Z" fill="#6d70c1" stroke="#152033" stroke-width="6" stroke-linejoin="round"/>
+  <path d="M1018 253 1147 341 1100 393Z" fill="#f2d45d" stroke="#152033" stroke-width="6" stroke-linejoin="round"/>
+  <path d="M462 112 776 233" fill="none" stroke="#253455" stroke-width="13" stroke-linecap="round"/>
+  <path d="M938 304 1018 253" fill="none" stroke="#253455" stroke-width="13" stroke-linecap="round"/>
+  <path d="M776 233 938 304" fill="none" stroke="#ffffff" stroke-width="33" stroke-linecap="round" opacity=".92"/>
+  <path d="M776 233 938 304" fill="none" stroke="#ef3340" stroke-width="23" stroke-linecap="round"/>
+  <path d="M776 233 938 304" fill="none" stroke="#7a0b18" stroke-width="4" stroke-linecap="round"/>
+  <circle cx="776" cy="233" r="15" fill="#ef3340" stroke="#7a0b18" stroke-width="4"/>
+  <circle cx="938" cy="304" r="15" fill="#ef3340" stroke="#7a0b18" stroke-width="4"/>
+</svg>

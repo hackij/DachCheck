@@ -1,0 +1,255 @@
+.school-logo {
+  display: block;
+  width: 112px;
+  height: 64px;
+  object-fit: contain;
+  filter: drop-shadow(0 3px 5px rgba(20, 39, 70, 0.14));
+}
+
+.topbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.header-home {
+  min-height: 42px;
+  padding: 0 14px;
+  border: 1px solid #cbd8ea;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.82);
+  color: var(--blue);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 800;
+  box-shadow: 0 5px 16px rgba(20, 39, 70, 0.07);
+}
+
+.header-home:hover {
+  background: #f3f7fd;
+  border-color: #9eb5d5;
+}
+
+.header-home svg {
+  width: 18px;
+}
+
+.topbar--compact .school-logo {
+  width: 92px;
+  height: 53px;
+}
+
+.hero {
+  height: 560px;
+}
+
+.hero-shade {
+  background:
+    linear-gradient(90deg, rgba(12, 27, 49, 0.9) 0%, rgba(12, 27, 49, 0.69) 48%, rgba(12, 27, 49, 0.08) 78%),
+    linear-gradient(0deg, rgba(12, 27, 49, 0.28), transparent 40%);
+}
+
+.hero-copy {
+  max-width: 650px;
+}
+
+.hero h1 {
+  margin-bottom: 20px;
+  font-size: clamp(2.6rem, 5.2vw, 4.8rem);
+}
+
+.competency-note {
+  max-width: 610px;
+  padding: 15px 18px;
+  border: 1px solid rgba(190, 216, 245, 0.3);
+  border-radius: 14px;
+  background: rgba(10, 28, 51, 0.57);
+  backdrop-filter: blur(8px);
+}
+
+.competency-note span {
+  display: block;
+  margin-bottom: 5px;
+  color: #9ad8ba;
+  font-size: 0.67rem;
+  font-weight: 850;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.competency-note p {
+  margin: 0;
+  color: #eef4fb;
+  font-size: 0.98rem;
+  line-height: 1.5;
+}
+
+@media (max-width: 900px) {
+  .hero { height: 570px; }
+}
+
+@media (max-width: 620px) {
+  .school-logo { width: 78px; height: 48px; }
+  .topbar--compact .school-logo { width: 72px; height: 44px; }
+  .topbar-actions { gap: 7px; }
+  .header-home { width: 42px; padding: 0; justify-content: center; }
+  .header-home span { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
+  .hero { height: 650px; }
+  .hero h1 { margin: 9px 0 16px; }
+  .competency-note { padding: 13px 14px; }
+  .competency-note p { font-size: 0.88rem; line-height: 1.42; }
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.knowledge-card--overview {
+  grid-column: span 2;
+  display: grid;
+  grid-template-columns: minmax(360px, 1.4fr) minmax(260px, 0.6fr);
+}
+
+.knowledge-card--overview .knowledge-card__image {
+  height: 310px;
+  padding: 18px;
+}
+
+.knowledge-card--overview .knowledge-card__body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 30px;
+}
+
+.knowledge-dialog__card--overview {
+  width: min(1040px, 100%);
+  grid-template-columns: 1fr;
+}
+
+.knowledge-dialog__card--overview .knowledge-dialog__visual {
+  min-height: 430px;
+  max-height: 510px;
+  padding: 24px;
+}
+
+.knowledge-dialog__card--overview .knowledge-dialog__content {
+  padding: 30px 42px 38px;
+}
+
+.knowledge-dialog__card--overview .feature-box,
+.knowledge-dialog__card--overview .practice-box {
+  display: inline-block;
+  width: calc(50% - 9px);
+  vertical-align: top;
+}
+
+.knowledge-dialog__card--overview .practice-box {
+  margin-left: 14px;
+}
+
+@media (max-width: 760px) {
+  .knowledge-card--overview { grid-column: auto; display: block; }
+  .knowledge-card--overview .knowledge-card__image { height: 230px; padding: 12px; }
+  .knowledge-card--overview .knowledge-card__body { display: block; padding: 20px; }
+  .knowledge-dialog__card--overview .knowledge-dialog__visual { min-height: 250px; max-height: 360px; padding: 12px; }
+  .knowledge-dialog__card--overview .knowledge-dialog__content { padding: 28px 22px; }
+  .knowledge-dialog__card--overview .feature-box,
+  .knowledge-dialog__card--overview .practice-box { display: block; width: auto; }
+  .knowledge-dialog__card--overview .practice-box { margin-left: 0; }
+}
+
+.trade-intro {
+  margin: 20px 0 26px;
+  padding: 22px 24px;
+  border: 1px solid #cfe1d8;
+  border-radius: 18px;
+  background: linear-gradient(135deg, #edf8f2, #f8fbff);
+  display: flex;
+  align-items: flex-start;
+  gap: 17px;
+}
+
+.trade-intro__icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 14px;
+  background: #258b64;
+  color: white;
+  display: grid;
+  place-items: center;
+  flex: none;
+}
+
+.trade-intro__icon svg { width: 24px; }
+.trade-intro h2 { margin: 5px 0 7px; font-size: 1.35rem; }
+.trade-intro p { margin: 0; color: #40536b; line-height: 1.55; }
+
+.coordination-box {
+  margin-top: 23px;
+  padding: 20px;
+  border: 1px solid #cbdbee;
+  border-radius: 15px;
+  background: #f2f6fc;
+}
+
+.coordination-box h3 {
+  margin: 0 0 17px;
+  color: #234f96;
+  font-size: .82rem;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.coordination-box h3 svg { width: 20px; }
+.coordination-section + .coordination-section { margin-top: 17px; }
+.coordination-section > b { display: block; margin-bottom: 9px; font-size: .78rem; color: #44566d; }
+.coordination-section ul { margin: 0; padding-left: 20px; }
+.coordination-section li { margin: 7px 0; line-height: 1.45; }
+
+.trade-tags { display: flex; flex-wrap: wrap; gap: 7px; }
+.trade-tags span { padding: 6px 9px; border: 1px solid #b9cce4; border-radius: 999px; background: white; color: #244f8e; font-size: .72rem; font-weight: 800; }
+
+.coordination-note {
+  margin: 18px 0 0;
+  padding: 11px 12px;
+  border-radius: 10px;
+  background: #fff4dc;
+  color: #755113;
+  font-size: .76rem;
+  line-height: 1.45;
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.coordination-note svg { width: 18px; flex: none; }
+.knowledge-dialog__card--overview .coordination-box { clear: both; }
+
+@media (max-width: 650px) {
+  .trade-intro { padding: 18px; display: block; }
+  .trade-intro__icon { margin-bottom: 14px; }
+  .coordination-box { padding: 17px 15px; }
+}
+
+.knowledge-card__image,
+.knowledge-dialog__visual {
+  overflow: hidden;
+}
+
+.knowledge-card .knowledge-card__image img[src*="/images/wikimedia/gauben/"] {
+  transform: scale(.72);
+  transform-origin: center;
+}
