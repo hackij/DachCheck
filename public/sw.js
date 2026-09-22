@@ -1,4 +1,4 @@
-const CACHE = "dachcheck-offline-v24";
+const CACHE = "dachcheck-offline-v25";
 self.addEventListener("install", event => {
   event.waitUntil(caches.open(CACHE).then(cache => cache.addAll(["./", "./index.html", "./images/dachcheck-hero.png", "./images/image-fallback.svg"])).then(() => self.skipWaiting()));
 });
@@ -16,8 +16,10 @@ self.addEventListener("fetch", event => {
     return;
   }
   event.respondWith(caches.match(event.request).then(hit => hit || fetch(event.request).then(response => {
-    const copy = response.clone();
-    caches.open(CACHE).then(cache => cache.put(event.request, copy));
+    if (response.ok) {
+      const copy = response.clone();
+      caches.open(CACHE).then(cache => cache.put(event.request, copy));
+    }
     return response;
-  }).catch(() => caches.match("./images/image-fallback.svg"))));
+  }).catch(() => Response.error())));
 });

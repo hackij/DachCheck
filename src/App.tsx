@@ -186,7 +186,7 @@ function Quiz({ session, setSession, onHome, onAreaChoice, onNextLevel }: { sess
     <div className="quiz-status"><div><button className="back-link" onClick={onHome}><ArrowLeft/> Übersicht</button><span className={`level-pill level-pill--${level}`}>{LEVEL_LABEL[level as Level]}</span><span className="category-pill">{CATEGORY_LABEL[q.category]}</span></div><div className="question-count"><b>{session.current + 1}</b> / {total}</div></div>
     <div className="progress-track" aria-label={`Fortschritt ${progress} Prozent`}><span style={{width: `${progress}%`}}/></div>
     <section className={`quiz-card ${textOnly ? "quiz-card--text-only" : ""}`}>
-      {!textOnly && <div className="visual-panel"><div className="image-wrap"><img src={q.image} alt={`Technische Darstellung zur Frage: ${q.question}`} onError={e => { e.currentTarget.src = assetPath("/images/image-fallback.svg"); }}/><span className="image-label">TECHNISCHE DARSTELLUNG</span></div>{session.word && <div className="solution-progress"><span>Lösungswort</span><strong aria-label="Bisherige Buchstaben">{letters}</strong></div>}</div>}
+      {!textOnly && <div className="visual-panel"><QuestionVisual key={q.id} question={q}/>{session.word && <div className="solution-progress"><span>Lösungswort</span><strong aria-label="Bisherige Buchstaben">{letters}</strong></div>}</div>}
       <div className="answer-panel">{textOnly && <div className="text-question-note"><BookOpen/><span><b>Fachfrage ohne Abbildung</b><small>Entscheidend sind Bedeutung und sichere Anwendung des Fachbegriffs.</small></span></div>}<span className="eyebrow">Frage {session.current + 1}</span><h1>{q.question}</h1><div className="answers">{options.map((o, i) => { const state = selected === o ? feedback : feedback === "right" && o === q.correctAnswer ? "right" : null; return <button key={o} className={`answer ${state ? `answer--${state}` : ""}`} disabled={feedback === "right"} onClick={() => answer(o)}><span>{String.fromCharCode(65+i)}</span><b>{o}</b>{state === "right" ? <Check/> : state === "wrong" ? <X/> : null}</button>})}</div>
       {textOnly && session.word && <div className="solution-progress solution-progress--text"><span>Lösungswort</span><strong aria-label="Bisherige Buchstaben">{letters}</strong></div>}
       {feedback === "wrong" && <div className="feedback feedback--wrong" role="alert"><TriangleAlert/><div><b>Noch nicht.</b><p>{q.hint}</p><small>Du kannst direkt noch einmal wählen.</small></div></div>}
@@ -194,6 +194,16 @@ function Quiz({ session, setSession, onHome, onAreaChoice, onNextLevel }: { sess
       <button className="primary next-button" disabled={feedback !== "right"} onClick={next}>{session.current === total - 1 ? "Training abschließen" : "Weiter"}<ArrowRight/></button></div>
     </section>
   </main><Footer/></div>;
+}
+
+function QuestionVisual({ question }: { question: Question }) {
+  const [loadFailed, setLoadFailed] = useState(false);
+  const [attempt, setAttempt] = useState(0);
+  return <div className="image-wrap">
+    {loadFailed ? <div className="image-error" role="alert"><TriangleAlert/><strong>Das Bild zu dieser Frage konnte nicht geladen werden.</strong><span>Bitte versuche es erneut. Beantworte die Frage erst, wenn die Abbildung sichtbar ist.</span><button className="secondary" type="button" onClick={() => { setLoadFailed(false); setAttempt(value => value + 1); }}>Bild erneut laden</button></div>
+      : <img key={`${question.id}-${attempt}`} src={question.image} alt={`Technische Darstellung zur Frage: ${question.question}`} onError={() => setLoadFailed(true)}/>}
+    <span className="image-label">TECHNISCHE DARSTELLUNG</span>
+  </div>;
 }
 
 function Complete({ session, onHome, onAreaChoice, onNextLevel }: { session: Session; onHome: () => void; onAreaChoice: () => void; onNextLevel: (l: Level) => void }) {
@@ -217,5 +227,5 @@ export function App() {
   if (!entered) return <Welcome onEnter={() => setEntered(true)} />;
   if (area === "choice") return <><div aria-hidden={!competencyAccepted}><AreaChoice onInfo={() => setArea("info")} onExam={() => setArea("exam")}/></div>{!competencyAccepted && <CompetencyIntro onContinue={() => setCompetencyAccepted(true)}/>}</>;
   if (area === "info") return <InfoArea onBack={() => setArea("choice")}/>;
-  return session ? <Quiz session={session} setSession={setSession} onHome={() => setSession(null)} onAreaChoice={() => setArea("choice")} onNextLevel={l => start("guided", l)}/> : <Home progress={progress} onStart={start} onReset={reset} onAreaChoice={() => setArea("choice")}/>;
+  return session ? <Quiz key={session.queue[session.current]} session={session} setSession={setSession} onHome={() => setSession(null)} onAreaChoice={() => setArea("choice")} onNextLevel={l => start("guided", l)}/> : <Home progress={progress} onStart={start} onReset={reset} onAreaChoice={() => setArea("choice")}/>;
 }
