@@ -2,6 +2,7 @@
 
 .quiz-card--text-only{grid-template-columns:minmax(0,760px);justify-content:center;min-height:570px;background:linear-gradient(145deg,#f7faff,#fff 48%)}
 .image-error{max-width:360px;display:grid;justify-items:center;gap:12px;padding:30px;text-align:center;color:#80503a}.image-error>svg{width:34px;height:34px}.image-error strong{color:#7f352e}.image-error span{font-size:.85rem;line-height:1.5}.image-error .secondary{margin-top:8px}
+.brand-logo{width:52px;height:52px;object-fit:contain;display:block;flex:none}.welcome-brand .brand-logo{width:56px;height:56px}
 .quiz-card--text-only .answer-panel{min-height:570px;padding:clamp(38px,6vw,72px)}
 .text-question-note{display:flex;align-items:center;gap:13px;margin-bottom:32px;padding:14px 16px;border:1px solid #d3dfef;border-radius:13px;background:#edf3fb;color:var(--blue)}
 .text-question-note>svg{width:25px;flex:none}

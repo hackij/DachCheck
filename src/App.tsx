@@ -35,7 +35,7 @@ export function createSession(mode: Mode, level: Level | "mixed", reviewIds: str
 
 function Header({ onHome, compact = false, showAreaButton = true }: { onHome: () => void; compact?: boolean; showAreaButton?: boolean }) {
   return <header className={compact ? "topbar topbar--compact" : "topbar"}>
-    <button className="brand" onClick={onHome} aria-label="Zur DachCheck-Startseite"><span className="brand-mark"><Layers3 /></span><span><strong>DachCheck</strong><small>Dachformen · Gauben · Dachteile</small></span></button>
+    <button className="brand" onClick={onHome} aria-label="Zur DachCheck-Startseite"><img className="brand-logo" src={assetPath("/images/dachcheck-logo-minimal-v2.png")} alt=""/><span><strong>DachCheck</strong><small>Dachformen · Gauben · Dachteile</small></span></button>
     <div className="topbar-actions">{showAreaButton && <button className="header-home" type="button" onClick={onHome}><House/><span>Bereichsauswahl</span></button>}<img className="school-logo" src={assetPath("/images/bs1-spengler-logo-transparent.png")} alt="BS1 Spengler" /></div>
   </header>;
 }
@@ -46,7 +46,7 @@ function Welcome({ onEnter }: { onEnter: () => void }) {
       <div className="welcome-banner">
         <img src={assetPath("/images/dachcheck-hero.png")} alt="Moderne Gebäude mit verschiedenen Dachformen" />
         <div className="welcome-shade" />
-        <div className="welcome-brand"><span className="brand-mark"><Layers3 /></span><span><strong>DachCheck</strong><small>Dachformen · Gauben · Dachteile</small></span></div>
+        <div className="welcome-brand"><img className="brand-logo" src={assetPath("/images/dachcheck-logo-minimal-v2.png")} alt=""/><span><strong>DachCheck</strong><small>Dachformen · Gauben · Dachteile</small></span></div>
         <div className="welcome-school"><img src={assetPath("/images/bs1-spengler-logo-transparent.png")} alt="BS1 Spengler" /></div>
         <div className="welcome-copy"><span className="eyebrow">Lernapp für das Spenglerhandwerk</span><h1 id="welcome-title">DachCheck</h1><p>Dachformen · Gauben · Dachteile</p></div>
       </div>
